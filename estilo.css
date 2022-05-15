@@ -44,3 +44,18 @@ h3{
     padding-left: 100px;
 }
 
+@media screen and (max-width:600px){ 
+
+    #login {
+        margin: 0px;
+        padding: 0px;
+        border-right: none;
+    }
+
+    #cadastro {
+        margin: 0px;
+        padding: 0px;
+        margin-top: 10px;
+    }
+}
+
