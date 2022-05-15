@@ -1,0 +1,46 @@
+
+label{
+    color: #225079;
+}
+
+h3{
+    color: #225079;
+    text-align: center;
+    font-size: 35px;
+}
+
+#btn_salvar {
+    background-color: #225079;
+    border-color: #225079;
+}
+
+#txt_senha {
+    color: #225079;
+}
+
+#enviar {
+    background-color: #225079;
+    border-color: #225079;
+}
+
+#login {
+    color: #225079;
+}
+.geral {
+
+    margin-top: 70px;
+    align-items: center;
+    margin-left: 12%;
+
+}
+
+#login{
+    padding: 50px;
+    padding-left: 30px;
+    border-right:  solid 1px;
+}
+
+#cadastro {
+    padding-left: 100px;
+}
+
