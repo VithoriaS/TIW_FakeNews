@@ -8,9 +8,41 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
 	 crossorigin="anonymous">
      <link rel = "stylesheet" href="estilo.css">
+     <link rel = "stylesheet" href="style.css">
 </head>
 
 <body>
+
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-dark  ">
+           <div class="container-fluid">
+           
+               <a href="index.html"> <img class="navbar-brand img-logo"  src="images/logo.png" alt="Negare"> </a>
+   
+               <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                   data-bs-target="#navbarNav" aria-controls="navbarNav"
+                   aria-expanded="false" aria-label="Toggle navigation">
+                   <span class="navbar-toggler-icon"></span>
+               </button>
+   
+                <div class="collapse navbar-collapse" id="navbarNav">
+                   <ul class="navbar-nav me-auto mb-5 mb-lg-4">
+                       <li class="nav-item">
+                           <a class="nav-link  text-dark"  href="noticias.html">Notícias</a>
+                       </li>
+                       <li class="nav-item">
+                           <a class="nav-link text-dark" href="dicas.html">Dicas</a>
+                       </li>
+                       <li class="nav-item">
+                           <a class="nav-link text-dark" href="sites.html">Sites confiáveis</a>
+                       </li>
+                 
+                   </ul>
+                   
+                </div>
+           </div>    
+         </nav>
+       </header>
 
     <div class="geral">
     <div class="container row">
@@ -38,7 +70,7 @@
                 <form id="login-form" class="form" method="post" onsubmit="loginUser (this)">
                     <h3>Cadastro</h3>
                     <div class="form-group">
-                        <label for="login" >Usuário</label><br>i
+                        <label for="login" >Usuário</label><br>
                         <input type="text" name="txt_login" id="txt_login" class="form-control">
                     </div>
                     <div class="form-group">
