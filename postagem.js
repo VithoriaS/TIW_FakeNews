@@ -1,4 +1,4 @@
-var db_noticias_inicial = {"data": []}
+var db_noticias_inicial = {"data": []};
 
 var db = JSON.parse(localStorage.getItem('db_noticias'));
 if (!db) {
