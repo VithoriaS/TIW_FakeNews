@@ -3,6 +3,16 @@
     color:black;
 }
 
+footer{
+    bottom: 0px;
+    position: fixed;
+    width: 100%;
+}
+
+.formulario{
+    margin-bottom: 10px;
+}
+
 .img-circle{
     border-radius: 100%;
     min-height: 30px;

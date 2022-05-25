@@ -83,34 +83,33 @@
                         <div class="container   ">
                             <div class="row">
                                 <form id="form-noticia">
-                                    <div class="form-group row">
+                                    <div class="form-group row formulario">
                                         <div class="col-sm-6">
-                                            <label for="inputNome">Nome</label>
-                                            <input type="text" class="form-control" id="inputNome" autocomplete="off">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <div class="col-sm-8">
-                                            <label for="inputTitle">Título</label>
+                                            <label for="inputTitle">Título da notícia</label>
                                             <input type="text" class="form-control" id="inputTitle" autocomplete="off">
                                         </div>
                                     </div>
-                                    <div class="form-group row">
-                                        <div class="col-sm-12">
-                                            <label for="inputDescription">Descrição</label>
-                                            <input type="text" class="form-control" id="inputDescription"
-                                                autocomplete="off">
+                                    <div class="form-group row formulario">
+                                        <div class="col-sm-8">
+                                            <label for="inputSubTitle">Subtítulo da notícia(opcional)</label>
+                                            <input type="text" class="form-control" id="inputSubTitle" autocomplete="off">
                                         </div>
                                     </div>
-                                    <div class="form-group row">
-                                        <div class="col-sm-4">
+                                    <div class="form-group row formulario" id="row-noticia">
+                                        <div class="col-sm-12">
+                                            <label for="inputNoticia">Notícia</label>
+                                            <textarea name="noticia" id="inputNoticia" cols="120" rows="10"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row formulario">
+                                        <div class="col-sm-5">
                                             <label for="inputImg">Imagem</label>
                                             <input type="file" class="form-control" id="inputImg" autocomplete="off">
                                         </div>
                                     </div>
-                                    <div class="form-group row">
+                                    <div class="form-group row formulario">
                                         <div class="col-sm-12">
-                                            <input type="button" class="btn btn-primary" id="btnInsert" value="Inserir">
+                                            <input type="button" class="btn btn-primary" id="btnInsert" value="Postar">
                                         </div>
                                     </div>
                                 </form>   
@@ -138,94 +137,21 @@
 <script src="postagem.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script>
-    function exibeNoticias() {
-        $("#table-Noticias").html("");
-
-        for (i = 0; i < db.data.length; i++) {
-            let noticia = db.data[i];
-            $("#table-Noticias").append(`<tr><td scope="row">${noticia.id}</td><td>${noticia.nome}</td><td>${noticia.titulo}</td><td>${noticia.descricao}</td><td>${noticia.imagem}</td></tr>`);
-        }
-    }
-
     function init() {
         $("#btnInsert").click(function () {
-            let campoNome = $("#inputNome").val();
             let campoTitle = $("#inputTitle").val();
-            let campoDescription = $('#inputDescription').val();
+            let campoSubTitle = $("#inputSubTitle").val();
+            let campoNoticia = $('#inputNoticia').val();
             let campoImg = $("#inputImg").val();
             let Noticia = {
-                nome: campoNome,
                 titulo: campoTitle,
-                descricao: campoDescription,
+                subTitulo: campoSubTitle,
+                noticia: campoNoticia,
                 imagem: campoImg
             };
 
             insertNoticia(Noticia);
 
-            exibeNoticias();
-
-            $("#form-noticia")[0].reset();
-        });
-
-        $("#btnUpdate").click(function () {
-            let campoId = $("#inputId").val();
-            if (campoId == "") {
-                displayMessage("Selecione uma Noticia para ser alterada.");
-                return;
-            }
-            let campoNome = $("#inputNome").val();
-            let campoTitle = $("#inputTitle").val();
-            let campoDescription = $("#inputDescription").val();
-            let campoImg = $("#inputImg").val();
-            let Noticia = {
-                nome: campoNome,
-                titulo: campoTitle,
-                descricao: campoDescription,
-                imagem: campoImg,
-            };
-
-            updateNoticia(parseInt(campoId), Noticia);
-
-            exibeNoticias();
-
-            $("#form-noticia")[0].reset();
-        });
-
-        $("#btnDelete").click(function () {
-            let campoId = $("#inputId").val();
-            if (campoId == "") {
-                displayMessage("Selecione uma Noticia a ser excluída.");
-                return;
-            }
-            deleteNoticia(parseInt(campoId));
-
-            exibeNoticias();
-
-            $("#form-noticia")[0].reset();
-        });
-
-        $('#msg').bind("DOMSubtreeModified", function () {
-            window.setTimeout(function () {
-                $(".alert").fadeTo(500, 0).slideUp(500, function () {
-                    $(this).remove();
-                });
-            }, 5000);
-        });
-
-        $("#grid-Noticias").on("click", "tr", function (e) {
-            let linhaNoticia = this;
-            colunas = linhaNoticia.querySelectorAll("td");
-
-            $("#inputId").val(colunas[0].innerText);
-            $("#inputNome").val(colunas[1].innerText);
-            $("#inputTitle").val(colunas[2].innerText);
-            $("#inputDescription").val(colunas[3].innerText);
-            $("#inputImg").val(colunas[4].innerText);
-        });
-
-        exibeNoticias();
-
-        $("#btnClear").click(function () {
             $("#form-noticia")[0].reset();
         });
     }
