@@ -7,191 +7,229 @@
     <title>Negare</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 
 <body>
     <header class="header">
-       
+
 
         <nav class="navbar navbar-expand-lg navbar-dark  ">
-           <div class="container-fluid">
-           
-               <a href="index.html"> <img class="navbar-brand img-logo"  src="images/logo.png" alt="Negare"> </a>
-   
-               <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                   data-bs-target="#navbarNav" aria-controls="navbarNav"
-                   aria-expanded="false" aria-label="Toggle navigation">
-                   <span class="navbar-toggler-icon"></span>
-               </button>
-   
+            <div class="container-fluid">
+
+                <a href="index.html"> <img class="navbar-brand img-logo" src="images/logo.png" alt="Negare"> </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
                 <div class="collapse navbar-collapse" id="navbarNav">
-                   <ul class="navbar-nav me-auto mb-5 mb-lg-4">
-                       <li class="nav-item">
-                           <a class="nav-link  text-dark"  href="noticias.html">Notícias</a>
-                       </li>
-                       <li class="nav-item">
-                           <a class="nav-link text-dark" href="dicas.html">Dicas</a>
-                       </li>
-                       <li class="nav-item">
-                           <a class="nav-link text-dark" href="sites.html">Sites confiáveis</a>
-                       </li>
-                 
-                   </ul>
+                    <ul class="navbar-nav me-auto mb-5 mb-lg-4">
+                        <li class="nav-item">
+                            <a class="nav-link  text-dark" href="noticias.html">Notícias</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="dicas.html">Dicas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="sites.html">Sites confiáveis</a>
+                        </li>
 
-                   
-                    <a href= "postagem.html"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAABSklEQVRIie2Wz07CQBCHP+UZPCiVYPQpAB/Af9AXEZ/FI0EvHLlh8FmMF2KiL0A9CsHDdmXZsNvZrTUe+CVzaDvdb2Y6O13Y6Y+0F+DbAHrAFdAEkvz+B/AGTIEJ8P5bwdWBAbAAVgW2BMZ5YKWUAp8CoG0Z0I2F3qEyCIWa2fdDoWlJqAkXZ54QV15f2Y8k4Efhgi2gI/QdFkEbyLp3Zbwj8V2w3n4A7FvgFKgVRRehGmoGOMEXFUC1Ln3gswrBp76HGe5GksrVcJnpZGfsUshMD/H90Svy/akl9X8xQXbGs5hohdpY2wY/Vwie+h4eU80A+cIaINv0IFysDZwLfQdFUFA/fte2irE5cCgBg5pg0pL7bAncSKFafcofBG5DoVpd4so+B65joVoHwD2qMyVZjhB805DxlrA+3p6webydoWbAU3690//RN0/sInIeI4efAAAAAElFTkSuQmCC"/></a>
-                          
-                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAAByElEQVRIie3WT29NQRgG8B83FmXZINrrlitW9EtYlrRXWJD4CuqzWDbYCIlYUMI36cKfaAjSda+NVpXFmTp/cu7MOaciFn2SycnMnOd95p1533mHA/wjHGrx7wBLuIwz6IfxL/iIV3iBz39rcbNYwQ5+JdpPPA0L2xdG+NZAsNrGWOwqekfmQVvRovfLbUVH+xQtijf2vC++ve+wgGM4iUcJ8TFmmgg/iBjZxvkaziVsRXj3UqID8ehdjXBXI7wdefqBwxXyEnoR4+8jc28ic71ge6LwQoQM05G5EwluyXZVeJggH+k4B+diwqcS5Bn1R9GT3XAp7kSMpXPzWg3vegPeOCb8toGBD8pnPR3GUrxS8FW3ej22qoAh5gv9eenYEBY3Ufh1AwOfsFbor2lWCqO2T6u/QLbwWHaHT9XwpnA1/LNdw/+hcoHU4X6F9BUX0g79wUVsVGysNCHOKkd3l7o6KvA31aRp9YzJPLyF3dCf6yA8CN/dYGujDXlZXpOfFYzFMIfn8lp8u41gEYvybf+OJ7ghS5+joQ1xU/bW2iuNm7jSVXQPx3FXFplNXhwPpa/eVs/bvvx5e1b5ebsuy9OXoX+A/we/AVA55aUaIMIJAAAAAElFTkSuQmCC"/>
-                   
-                </div>
-           </div>    
-         </nav>
-       </header>
+                    </ul>
 
-  <main>
 
-    <div class="container"> 
-      <div class="row ">
-         <h1 class="emalta">
-           <b>  Em alta  </b>
-         </h1>    
-      </div>  
-    </div>
+                    <a href="postagem.html"><img
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAABSklEQVRIie2Wz07CQBCHP+UZPCiVYPQpAB/Af9AXEZ/FI0EvHLlh8FmMF2KiL0A9CsHDdmXZsNvZrTUe+CVzaDvdb2Y6O13Y6Y+0F+DbAHrAFdAEkvz+B/AGTIEJ8P5bwdWBAbAAVgW2BMZ5YKWUAp8CoG0Z0I2F3qEyCIWa2fdDoWlJqAkXZ54QV15f2Y8k4Efhgi2gI/QdFkEbyLp3Zbwj8V2w3n4A7FvgFKgVRRehGmoGOMEXFUC1Ln3gswrBp76HGe5GksrVcJnpZGfsUshMD/H90Svy/akl9X8xQXbGs5hohdpY2wY/Vwie+h4eU80A+cIaINv0IFysDZwLfQdFUFA/fte2irE5cCgBg5pg0pL7bAncSKFafcofBG5DoVpd4so+B65joVoHwD2qMyVZjhB805DxlrA+3p6webydoWbAU3690//RN0/sInIeI4efAAAAAElFTkSuQmCC" /></a>
 
-    <div class="container">
-        <div class="row ">
-            
-            <div class="col-sm-6 col-md-6 col-lg-3 ">
-                <div class="card" widht="100%">
-                    <img src="images/do.jpg" class="card-img-top" alt="emalta">
-                    <div class="card-body">
-                        <p class="card-text"><b>Noticia em alta 1</b></p>
-                    </div>
+                    <img
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAAByElEQVRIie3WT29NQRgG8B83FmXZINrrlitW9EtYlrRXWJD4CuqzWDbYCIlYUMI36cKfaAjSda+NVpXFmTp/cu7MOaciFn2SycnMnOd95p1533mHA/wjHGrx7wBLuIwz6IfxL/iIV3iBz39rcbNYwQ5+JdpPPA0L2xdG+NZAsNrGWOwqekfmQVvRovfLbUVH+xQtijf2vC++ve+wgGM4iUcJ8TFmmgg/iBjZxvkaziVsRXj3UqID8ehdjXBXI7wdefqBwxXyEnoR4+8jc28ic71ge6LwQoQM05G5EwluyXZVeJggH+k4B+diwqcS5Bn1R9GT3XAp7kSMpXPzWg3vegPeOCb8toGBD8pnPR3GUrxS8FW3ej22qoAh5gv9eenYEBY3Ufh1AwOfsFbor2lWCqO2T6u/QLbwWHaHT9XwpnA1/LNdw/+hcoHU4X6F9BUX0g79wUVsVGysNCHOKkd3l7o6KvA31aRp9YzJPLyF3dCf6yA8CN/dYGujDXlZXpOfFYzFMIfn8lp8u41gEYvybf+OJ7ghS5+joQ1xU/bW2iuNm7jSVXQPx3FXFplNXhwPpa/eVs/bvvx5e1b5ebsuy9OXoX+A/we/AVA55aUaIMIJAAAAAElFTkSuQmCC" />
+
                 </div>
             </div>
+        </nav>
+    </header>
 
-            <div class="col-sm-6 col-md-6 col-lg-3">
-                <div class="card" widht="100%">
-                    <img src="images/do.jpg" class="card-img-top" alt="emalta">
-                    <div class="card-body">
-                        <p class="card-text"><b>Noticia em alta 2</b></p>
-                    </div>
-                </div>
-            </div>
+    <main>
 
-            <div class="col-sm-6 col-md-6 col-lg-3">
-                <div class="card" widht="100%">
-                    <img src="images/do.jpg" class="card-img-top" alt="emalta">
-                    <div class="card-body">
-                        <p class="card-text"><b>Noticia em alta 3</b></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-6 col-md-6 col-lg-3">
-                <div class="card" widht="100%">
-                    <img src="images/do.jpg" class="card-img-top" alt="emalta">
-                    <div class="card-body">
-                        <p class="card-text"><b>Noticia em alta 4</b></p>
-                    </div>
-                </div>
-            </div>
+        <div class="container">
+            <div class="row ">
+                <h1 class="emalta">
+                    <b> Em alta </b>
+                </h1>
             </div>
         </div>
-    </div>
-    
 
-    <div class="container">
-        <div class="row">
-        <div class="d-flex justify-content-center">   
-          <div class="col-sm-12 col-md-10 col-lg-8 ">
-                <div class="container bg-light">
-                    <div class="row">
+        <div class="container">
+            <div class="row ">
 
-                        <div class="postagem">
-                            <div class="col-1 ">
-                                <div class="profile-header-container">
-                                    
-                                    <img class="img-circle" src="images/image1.png" height="90%" width="90%" />
-                                </div>
-                            </div>
-                            <div class="col-11 ">
-                                
-                                <h class="nome"><b>USER1</b></h>
-                                <p><b>20/02/2002</b></p>
-                                <p class="titulo-postagem">Massa tincidunt nunc pulvinar sapien et ligula ullamcorper?</p>
-                                <img src="images/download.jpg" class="img-noticia" alt="imagem">
-                                <br>
-                                <br>
-                                <p class="postagem">Massa tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada proin. Dui faucibus in ornare quam viverra orci sagittis eu volutpat. Amet aliquam id diam maecenas ultricies mi eget. Quisque non tellus orci ac auctor augue mauris augue. Libero justo laoreet sit amet cursus sit amet. Ac turpis egestas sed tempus urna. Vitae ultricies leo integer malesuada nunc vel risus commodo viverra. Sed elementum tempus egestas sed sed risus pretium. Aliquam eleifend mi in nulla posuere sollicitudin. Gravida arcu ac tortor dignissim convallis aenean et tortor. Eget nulla facilisi etiam dignissim diam. Eu nisl nunc mi ipsum faucibus vitae.</p>
-                                <br>
-                                <input class="form-control form-control-sm" type="text" placeholder="Comente aqui...">
-                                <br>
-                                <br>
-                            </div>
+                <div class="col-sm-6 col-md-6 col-lg-3 ">
+                    <div class="card" widht="100%">
+                        <img src="images/do.jpg" class="card-img-top" alt="emalta">
+                        <div class="card-body">
+                            <p class="card-text"><b>Noticia em alta 1</b></p>
                         </div>
+                    </div>
+                </div>
 
-                        <div class="postagem">
-                            <div class="col-1 ">
-                                <div class="profile-header-container">
-                                    <img class="img-circle" src="images/image1.png" height="90%" width="90%" />
-                                </div>
-                            </div>
-                            <div class="col-11 ">
-                                <h class="nome" ><b>USER2</b></h>
-                                <p><b>20/02/2002</b></p>
-                                <p class="titulo-postagem">Dui faucibus in ornare quam viverra?</p>
-                                <img src="images/download(1).jpg" class="img-noticia" alt="imagem">
-                                <br>
-                                <br>
-                                <p class="postagem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Urna porttitor rhoncus dolor purus non enim praesent. Dui sapien eget mi proin sed libero enim. Commodo odio aenean sed adipiscing diam donec adipiscing tristique. Metus aliquam eleifend mi in nulla posuere sollicitudin. Mi tempus imperdiet nulla malesuada. Tincidunt nunc pulvinar sapien et ligula. Donec enim diam vulputate ut pharetra sit amet. Nec feugiat in fermentum posuere urna. Libero enim sed faucibus turpis in eu. Nunc id cursus metus aliquam eleifend mi. Elementum integer enim neque volutpat ac tincidunt vitae semper. Nulla malesuada pellentesque elit eget gravida. A arcu cursus vitae congue mauris rhoncus aenean. Amet luctus venenatis lectus magna fringilla urna porttitor. Auctor neque vitae tempus quam pellentesque.</p>
-                                <br>
-                                <input class="form-control form-control-sm" type="text" placeholder="Comente aqui...">
-                                <br>
-                                <br>
-                            </div>
+                <div class="col-sm-6 col-md-6 col-lg-3">
+                    <div class="card" widht="100%">
+                        <img src="images/do.jpg" class="card-img-top" alt="emalta">
+                        <div class="card-body">
+                            <p class="card-text"><b>Noticia em alta 2</b></p>
                         </div>
+                    </div>
+                </div>
 
-                        <div class="postagem">
-                            <div class="col-1 ">
-                                <div class="profile-header-container">
-                                    <img class="img-circle" src="images/image1.png" height="90%" width="90%" />
-                                </div>
-                            </div>
-                            <div class="col-11 ">
-                                <h class="nome" ><b>USER3</b></h>
-                                <p><b>20/02/2002</b></p>
-                                <p class="titulo-postagem">onsectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
-                                <img src="images/download(1).jpg" class="img-noticia" alt="imagem">
-                                <br>
-                                <br>
-                                <p class="postagem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Urna porttitor rhoncus dolor purus non enim praesent. Dui sapien eget mi proin sed libero enim. Commodo odio aenean sed adipiscing diam donec adipiscing tristique. Metus aliquam eleifend mi in nulla posuere sollicitudin. Mi tempus imperdiet nulla malesuada. Tincidunt nunc pulvinar sapien et ligula. Donec enim diam vulputate ut pharetra sit amet. Nec feugiat in fermentum posuere urna. Libero enim sed faucibus turpis in eu. Nunc id cursus metus aliquam eleifend mi. Elementum integer enim neque volutpat ac tincidunt vitae semper. Nulla malesuada pellentesque elit eget gravida. A arcu cursus vitae congue mauris rhoncus aenean. Amet luctus venenatis lectus magna fringilla urna porttitor. Auctor neque vitae tempus quam pellentesque.</p>
-                                <br>
-                                <input class="form-control form-control-sm" type="text" placeholder="Comente aqui...">
-                                <br>
-                                <br>
-                            </div>
+                <div class="col-sm-6 col-md-6 col-lg-3">
+                    <div class="card" widht="100%">
+                        <img src="images/do.jpg" class="card-img-top" alt="emalta">
+                        <div class="card-body">
+                            <p class="card-text"><b>Noticia em alta 3</b></p>
                         </div>
+                    </div>
+                </div>
 
+                <div class="col-sm-6 col-md-6 col-lg-3">
+                    <div class="card" widht="100%">
+                        <img src="images/do.jpg" class="card-img-top" alt="emalta">
+                        <div class="card-body">
+                            <p class="card-text"><b>Noticia em alta 4</b></p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         </div>
-    </div>
-            
+
+
+        <div class="container">
+            <div class="row">
+                <div class="d-flex justify-content-center">
+                    <div class="col-sm-12 col-md-10 col-lg-8 ">
+                        <div class="container bg-light">
+                            <div class="row">
+
+                                <div>
+                                    <div class="col-1 ">
+                                        <div class="profile-header-container">
+
+                                            <img class="img-circle" src="images/image1.png" height="90%" width="90%" />
+                                        </div>
+                                    </div>
+                                    <div class="col-11 ">
+
+                                        <h class="nome"><b>USER1</b></h>
+                                        <p><b>20/02/2002</b></p>
+                                        <p class="titulo-postagem">Massa tincidunt nunc pulvinar sapien et ligula
+                                            ullamcorper?</p>
+                                        <img src="images/download.jpg" class="img-noticia" alt="imagem">
+                                        <br>
+                                        <br>
+                                        <p class="postagem">Massa tincidunt nunc pulvinar sapien et ligula ullamcorper
+                                            malesuada proin. Dui faucibus in ornare quam viverra orci sagittis eu
+                                            volutpat. Amet aliquam id diam maecenas ultricies mi eget. Quisque non
+                                            tellus orci ac auctor augue mauris augue. Libero justo laoreet sit amet
+                                            cursus sit amet. Ac turpis egestas sed tempus urna. Vitae ultricies leo
+                                            integer malesuada nunc vel risus commodo viverra. Sed elementum tempus
+                                            egestas sed sed risus pretium. Aliquam eleifend mi in nulla posuere
+                                            sollicitudin. Gravida arcu ac tortor dignissim convallis aenean et tortor.
+                                            Eget nulla facilisi etiam dignissim diam. Eu nisl nunc mi ipsum faucibus
+                                            vitae.</p>
+                                        <br>
+                                        <input class="form-control form-control-sm" type="text"
+                                            placeholder="Comente aqui...">
+                                        <br>
+                                        <br>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="col-1 ">
+                                        <div class="profile-header-container">
+                                            <img class="img-circle" src="images/image1.png" height="90%" width="90%" />
+                                        </div>
+                                    </div>
+                                    <div class="col-11 ">
+                                        <h class="nome"><b>USER2</b></h>
+                                        <p><b>20/02/2002</b></p>
+                                        <p class="titulo-postagem">Dui faucibus in ornare quam viverra?</p>
+                                        <img src="images/download(1).jpg" class="img-noticia" alt="imagem">
+                                        <br>
+                                        <br>
+                                        <p class="postagem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                            do eiusmod tempor incididunt ut labore et dolore magna aliqua. Urna
+                                            porttitor rhoncus dolor purus non enim praesent. Dui sapien eget mi proin
+                                            sed libero enim. Commodo odio aenean sed adipiscing diam donec adipiscing
+                                            tristique. Metus aliquam eleifend mi in nulla posuere sollicitudin. Mi
+                                            tempus imperdiet nulla malesuada. Tincidunt nunc pulvinar sapien et ligula.
+                                            Donec enim diam vulputate ut pharetra sit amet. Nec feugiat in fermentum
+                                            posuere urna. Libero enim sed faucibus turpis in eu. Nunc id cursus metus
+                                            aliquam eleifend mi. Elementum integer enim neque volutpat ac tincidunt
+                                            vitae semper. Nulla malesuada pellentesque elit eget gravida. A arcu cursus
+                                            vitae congue mauris rhoncus aenean. Amet luctus venenatis lectus magna
+                                            fringilla urna porttitor. Auctor neque vitae tempus quam pellentesque.</p>
+                                        <br>
+                                        <input class="form-control form-control-sm" type="text"
+                                            placeholder="Comente aqui...">
+                                        <br>
+                                        <br>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="col-1 ">
+                                        <div class="profile-header-container">
+                                            <img class="img-circle" src="images/image1.png" height="90%" width="90%" />
+                                        </div>
+                                    </div>
+                                    <div class="col-11 ">
+                                        <h class="nome"><b>USER3</b></h>
+                                        <p><b>20/02/2002</b></p>
+                                        <p class="titulo-postagem">onsectetur adipiscing elit, sed do eiusmod tempor
+                                            incididunt</p>
+                                        <img src="images/download(1).jpg" class="img-noticia" alt="imagem">
+                                        <br>
+                                        <br>
+                                        <p class="postagem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                            do eiusmod tempor incididunt ut labore et dolore magna aliqua. Urna
+                                            porttitor rhoncus dolor purus non enim praesent. Dui sapien eget mi proin
+                                            sed libero enim. Commodo odio aenean sed adipiscing diam donec adipiscing
+                                            tristique. Metus aliquam eleifend mi in nulla posuere sollicitudin. Mi
+                                            tempus imperdiet nulla malesuada. Tincidunt nunc pulvinar sapien et ligula.
+                                            Donec enim diam vulputate ut pharetra sit amet. Nec feugiat in fermentum
+                                            posuere urna. Libero enim sed faucibus turpis in eu. Nunc id cursus metus
+                                            aliquam eleifend mi. Elementum integer enim neque volutpat ac tincidunt
+                                            vitae semper. Nulla malesuada pellentesque elit eget gravida. A arcu cursus
+                                            vitae congue mauris rhoncus aenean. Amet luctus venenatis lectus magna
+                                            fringilla urna porttitor. Auctor neque vitae tempus quam pellentesque.</p>
+                                        <br>
+                                        <input class="form-control form-control-sm" type="text"
+                                            placeholder="Comente aqui...">
+                                        <br>
+                                        <br>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
 
-</main>
-     
-<footer>
-    <div class="text-center p-3">
-        <p class="footertxt">2022 Copyright - <b>NEGARE </b>- Todos direitos reservados
-        </p>
-    </div>
-</footer>
+
+    </main>
+
+    <footer>
+        <div class="text-center p-3">
+            <p class="footertxt">2022 Copyright - <b>NEGARE </b>- Todos direitos reservados
+            </p>
+        </div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
         integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
         crossorigin="anonymous"></script>
