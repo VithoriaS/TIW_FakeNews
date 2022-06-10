@@ -60,14 +60,14 @@ function displayMessage(msg) {
 }
 
 function insertNoticia(noticia) {
-    let user = JSON.parse(localStorage.getItem('db_usarios'));
     let now = new Date;
     let novoId = 1;
     if (db.data.length != 0) 
       novoId = db.data[db.data.length - 1].id + 1;
+    let user = JSON.parse(sessionStorage.getItem('usuarioCorrente'));
     let novaNoticia = {
         "id": novoId,
-        "nome": user,
+        "nome": user.nome,
         "data": `${now.getDate()}/0${now.getMonth() + 1}/${now.getFullYear()}`,
         "titulo": noticia.titulo,
         "subTitulo" : noticia.subTitulo,

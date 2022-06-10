@@ -30,7 +30,7 @@
             document.getElementById('nomeUsuario').innerHTML = usuarioCorrente.nome;
 
             // Lista os usuários 
-            //exibeUsuarios ();
+            exibeUsuarios ();
         }
 
         // Associa ao evento de carga da página a função para verificar se o usuário está logado
@@ -223,17 +223,15 @@
 <script src="postagem.js"></script>
 <script>
     function exibeContatos() {
-        // Remove todas as linhas do corpo da tabela
         $("#corpo").html("");
-        // Popula a tabela com os registros do banco de dados
         for (i = db.data.length - 1; i >= 0; i--) {
             let noticia = db.data[i];
-            $("#corpo").append(`<h6><b>${noticia.nome}</b></h6>
+            $("#corpo").append(`<div><h6><b>${noticia.nome}</b></h6>
                                 <h6>${noticia.data}</h6>
                                 <h4><b>${noticia.titulo}</b></h4>
                                 <h5>${noticia.subTitulo}</h5>
-                                <img src = "${noticia.imagem}">
-                                <p class = 'postagem'>${noticia.noticia}</p>`);
+                                <img width="500" src = "${noticia.imagem}">
+                                <p class = 'postagem'>${noticia.noticia}</p></div>`);
         }
     }
 

@@ -13,28 +13,16 @@
 
     <script>
 
-        if (!usuarioCorrente.login) {
-            window.location.href = LOGIN_URL;
-        }
-        /*
-                   var btn = document.getElementById('button_login');
-           
-           
-                   if(!usuarioCorrente.login) {
-                       btn.style.display = 'block';
-                   } else {
-                       document.getElementById(el).style.display = 'none';
-           
-                   }
-           */
+        
+
         function initPage() {
 
 
             // Informa o nome do usuário logado
-            //document.getElementById('nomeUsuario').innerHTML = usuarioCorrente.nome;
+            document.getElementById('nomeUsuario').innerHTML = usuarioCorrente.nome;
 
             // Lista os usuários 
-            //exibeUsuarios ();
+            //exibeUsuarios();
         }
 
         // Associa ao evento de carga da página a função para verificar se o usuário está logado
@@ -108,7 +96,8 @@
                                     <div class="form-group row formulario">
                                         <div class="col-sm-5">
                                             <label for="inputImg">Imagem</label>
-                                            <input type="file" class="form-control" id="inputImg" autocomplete="off" accept="image/*">
+                                            <input type="file" class="form-control" id="inputImg" autocomplete="off"
+                                                accept="image/*">
                                         </div>
                                     </div>
                                     <div class="form-group row formulario">
@@ -116,6 +105,7 @@
                                             <input type="button" class="btn btn-primary" id="btnInsert" value="Postar">
                                         </div>
                                     </div>
+                                    <img id="preview" width="500" alt="Imagem a ser escolhida...">
                                 </form>
                             </div>
                         </div>
@@ -141,24 +131,39 @@
 <script src="postagem.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script>
+    let preview = document.getElementById('preview');
+    
+    function previewFile(event) {
+        let reader = new FileReader();
+        let file = event.target.files[0];
+
+        reader.readAsDataURL(file);
+        reader.onloadend = () => {
+            preview.src = reader.result;
+        };
+    }
+    
+    document.getElementById("inputImg").addEventListener("change", previewFile);
+    
     function init() {
         $("#btnInsert").click(function () {
             let campoTitle = $("#inputTitle").val();
             let campoSubTitle = $("#inputSubTitle").val();
             let campoNoticia = $('#inputNoticia').val();
-            let campoImg = $("#inputImg").val();
             let Noticia = {
                 titulo: campoTitle,
                 subTitulo: campoSubTitle,
                 noticia: campoNoticia,
-                imagem: campoImg
+                imagem: preview.src,
             };
 
             insertNoticia(Noticia);
 
             $("#form-noticia")[0].reset();
+            preview.src = "";
         });
     }
+
 </script>
 </body>
 
