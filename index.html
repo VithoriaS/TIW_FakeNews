@@ -287,13 +287,7 @@
 
             if (usuarioCorrente.login) {
                 document.getElementById("header1").style.display="none";
-            }else {
-                document.getElementById("header2").style.display="none";
-            }
-            
-
-                
-            btn4.addEventListener('click', function click(e) {
+                btn4.addEventListener('click', function click(e) {
                 i++;
                 disp4.innerHTML = i;
                 btn4.removeEventListener('click', click);
@@ -310,6 +304,13 @@
                 disp2.innerHTML = a;
                 btn2.removeEventListener('click', click);
             });
+            }else {
+                document.getElementById("header2").style.display="none";
+            }
+            
+
+                
+         
 
 
         </script>
