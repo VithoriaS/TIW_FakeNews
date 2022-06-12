@@ -34,10 +34,18 @@ h3{
 
 }
 
+#nomeUsuario{
+    font-size: 15px;
+}
 #login{
     padding: 50px;
     padding-left: 30px;
     border-right:  solid 1px;
+}
+
+#buttoncurtir{
+    background-color: none;
+    margin-bottom: 0;
 }
 
 #cadastro {
@@ -58,4 +66,3 @@ h3{
         margin-top: 10px;
     }
 }
-
