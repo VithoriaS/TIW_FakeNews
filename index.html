@@ -222,7 +222,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script src="postagem.js"></script>
 <script>
-    function exibeContatos() {
+    function exibeNoticias() {
         $("#corpo").html("");
         for (i = db.data.length - 1; i >= 0; i--) {
             let noticia = db.data[i];
@@ -237,7 +237,7 @@
 
     function init()
     {
-        exibeContatos();
+        exibeNoticias();
     }
 </script>
 </body>
