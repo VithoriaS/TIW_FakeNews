@@ -46,7 +46,7 @@ var db_noticias_inicial = {"data": [
         'titulo':'IEM Major Rio 2022',
         'subTitulo':'Primeiro Major do Brasil será realizado no Rio de Janeiro, com lugar marcado e tipos de ingressos já definidos',
         'noticia':'Ingressos para um dos maiores campeonatos do jogo CS:GO podem variar de R$89,00 até R$1999,00. Ingressos começaram a ser vendidos nesta quarta-feira (25/05) as 14 horas. O evento já tem data marcada para o final de outubro e início de novembro.',
-        'imagem':'upload/IEM-Major-Rio-2022-800x470.jpg.opdownload'
+        'imagem':'upload/1200px-MLG_Columbus_-_Luminosity_vs_Navi.jpg'
     }
 ]};
 
