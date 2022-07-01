@@ -62,7 +62,7 @@ function displayMessage(msg) {
 function insertNoticia(noticia) {
     let now = new Date;
     let novoId = 1;
-    if (db.data.length != 0) 
+    if (db.data.length != 0)
       novoId = db.data[db.data.length - 1].id + 1;
     let user = JSON.parse(sessionStorage.getItem('usuarioCorrente'));
     let novaNoticia = {
@@ -96,7 +96,7 @@ function updateNoticia(id, noticia) {
     localStorage.setItem('db_noticias', JSON.stringify(db));
 }
 
-function deleteNoticia(id) {    
+function deleteNoticia(id) {
     db.data = db.data.filter(function (element) { return element.id != id });
 
     displayMessage("Noticia removida com sucesso");
