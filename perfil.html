@@ -90,8 +90,8 @@
     <script src="postagem.js"></script>
     <script>
         function exibeNoticias() {
-            document.getElementById('userName').placeholder = usuarioCorrente.nome;
-            document.getElementById('fullName').placeholder = usuarioCorrente.login;
+            document.getElementById('userName').placeholder = usuarioCorrente.login;
+            document.getElementById('fullName').placeholder = usuarioCorrente.nome;
             document.getElementById('email').placeholder = usuarioCorrente.email;
             document.getElementById('senha').value = JSON.parse(localStorage.db_usuarios).usuarios[2].senha;
 
