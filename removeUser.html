@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Login</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	 crossorigin="anonymous">
+     <link rel = "stylesheet" href="estilo.css">
+     <link rel = "stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-dark  ">
+           <div class="container-fluid">
+           
+               <a href="index.html"> <img class="navbar-brand img-logo"  src="images/logo.png" alt="Negare"> </a>
+   
+               <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                   data-bs-target="#navbarNav" aria-controls="navbarNav"
+                   aria-expanded="false" aria-label="Toggle navigation">
+                   <span class="navbar-toggler-icon"></span>
+               </button>
+   
+                <div class="collapse navbar-collapse" id="navbarNav">
+                   <ul class="navbar-nav me-auto mb-5 mb-lg-4">
+                       <li class="nav-item">
+                           <a class="nav-link  text-dark"  href="noticias.html">Notícias</a>
+                       </li>
+                       <li class="nav-item">
+                           <a class="nav-link text-dark" href="dicas.html">Dicas</a>
+                       </li>
+                       <li class="nav-item">
+                           <a class="nav-link text-dark" href="sites.html">Sites confiáveis</a>
+                       </li>
+                       <li class="nav-item">
+                        <a class="nav-link text-dark" href="postagem.html">Fazer uma postagem</a>
+                    </li>
+                 
+                   </ul>
+                   
+                </div>
+           </div>    
+         </nav>
+    </header>
+
+    <div class="geral">
+    <div class="container row">
+	<div id="remove" class="col-12">
+			
+        <form id="remove-form" class="form" method="post" onsubmit="loginUser (this)">
+            <h3>Remover Conta</h3>
+            <div class="form-group">
+                <label for="username" >Usuário</label><br>
+                <input type="text" name="username" id="username" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Senha</label><br>
+                <input type="password" name="password" id="password" class="form-control" required>
+            </div>
+            <div class="form-group text-right">                            
+                <button type="button" id="btn_remover" class="btn btn-info">Remove</button>  
+                
+            </div>
+        </form>
+                
+      </div>
+    </div>
+    </div>
+</div>
+
+    <script src="removeLogin.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>    
+</body>
+</html> 

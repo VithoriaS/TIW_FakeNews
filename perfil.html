@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -116,4 +117,207 @@
         }
     </script>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="login.js"></script>
+    <title>Perfil</title>
+</head>
+<body onload="init()">
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-dark  ">
+            <div class="container-fluid">
+               <a href="index.html"> <img class="navbar-brand img-logo"  src="images/logo.png" alt="Negare"> </a>
+   
+               <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                   data-bs-target="#navbarNav" aria-controls="navbarNav"
+                   aria-expanded="false" aria-label="Toggle navigation">
+                   <span class="navbar-toggler-icon"></span>
+               </button>
+   
+                <div class="collapse navbar-collapse" id="navbarNav">
+                   <ul class="navbar-nav me-auto mb-5 mb-lg-4">
+                       <li class="nav-item">
+                           <a class="nav-link  text-dark"  href="noticias.html">Notícias</a>
+                       </li>
+                       <li class="nav-item">
+                           <a class="nav-link text-dark" href="dicas.html">Dicas</a>
+                       </li>
+                       <li class="nav-item">
+                           <a class="nav-link text-dark" href="sites.html">Sites confiáveis</a>
+                       </li>
+                       <li class="nav-item">
+                        <a class="nav-link text-dark" href="postagem.html">Fazer uma postagem</a>
+                       </li>
+                   </ul>
+                </div>
+           </div>    
+        </nav>
+    </header>
+
+    <main class="container" id="container">
+        <div class="row" id="corpo">
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Nome de usuário</span>
+                <input id="userName" type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1" disabled>
+            </div>
+            <div class="input-group mb-3">
+              
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon2">Nome completo</span>
+                <input id="fullName" type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon2" disabled>
+            </div>
+              
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon3">E-mail</span>
+                <input id="email" type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon3" disabled>
+            </div>
+              
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon4">Senha</span>
+                <input id="senha" type="password" class="form-control" aria-label="Username" disabled>
+            </div>
+            </div>
+        </div>
+        <button class="edit-login-data" id="btn" onclick="onclickEditLoginData()"> Alterar cadastro </button>
+    </main>
+
+    <footer>
+        <div class="text-center p-3">
+            <p class="footertxt">2022 Copyright - <b>NEGARE </b>- Todos direitos reservados
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+    <script src="editLogin.js"></script>
+
+    <script src="postagem.js"></script>
+    <script>
+        function onclickEditLoginData() {
+            document.getElementById('fullName').disabled = false;
+            document.getElementById('senha').disabled = false;
+
+            const userId = usuarioCorrente.id;
+
+            const div = document.createElement("div");
+            const span = document.createElement("span");
+            const input = document.createElement("input");
+
+            div.setAttribute('class', 'input-group mb-3');
+
+            span.setAttribute('id', 'basic-addon5');
+            span.innerHTML = 'Confirmar senha';
+            span.setAttribute('class', 'input-group-text');
+
+            input.setAttribute('type', 'password');
+            input.setAttribute('id', 'confirmar-senha');
+            input.setAttribute('aria-label', 'Username');
+            input.setAttribute('class', 'form-control');
+
+            div.appendChild(span);
+            div.appendChild(input);
+            let corpo = document.getElementById('corpo');
+            corpo.appendChild(div);
+
+            const btn = document.createElement('button');
+            btn.setAttribute('class', 'send-login-data');
+            btn.setAttribute('id', 'enviar-novo-cadastro');
+            btn.setAttribute('onclick', 'sendNewLoginData()');
+            btn.innerHTML = 'Enviar novo cadastro';
+
+            let container = document.getElementById('container');
+            container.appendChild(btn);
+
+            var database = localStorage.getItem('db_usuarios');
+            var { usuarios } = JSON.parse(database);
+            var userToBeEditted = usuarios.findIndex(e => e.id === userId);
+
+            if (userToBeEditted > 0) {
+                sendNewLoginData()
+            } else if (userToBeEditted === -1) {
+                alert("usuário não encontrado!");
+            }
+        }
+
+        function sendNewLoginData() {
+            let userId = usuarioCorrente.id;
+
+            const newUsername = document.getElementById('fullName').value;
+            const pass = document.getElementById('senha').value;
+            const newpass = document.getElementById('confirmar-senha').value;
+
+            const database = localStorage.getItem('db_usuarios');
+
+            const { usuarios } = JSON.parse(database);
+
+
+            const idx = usuarios.findIndex(e => e.id === userId);
+
+            if (pass && newUsername && newpass) {
+                if (pass !== newpass) {
+                    alert('As senhas devem coincidir!');
+                } else{
+                    if (idx !== -1) {
+                        usuarios[idx].nome = newUsername;
+                        usuarios[idx].senha = pass;
+
+                        localStorage.setItem('db_usuarios', JSON.stringify ({usuarios}));
+                        console.log('')
+                        alert('Cadastro de usuário alterado com sucesso!');
+                        setTimeout(() => {
+                            window.location.href = '/login.html';
+                        }, 3000)
+                    } else {
+                        alert("Usuário não encontrado!");
+                    }
+                }
+            }
+        }
+
+        function exibeNoticias() {
+            document.getElementById('userName').placeholder = usuarioCorrente.login;
+            document.getElementById('fullName').placeholder = usuarioCorrente.nome;
+            document.getElementById('email').placeholder = usuarioCorrente.email;
+            document.getElementById('senha').value = JSON.parse(localStorage.db_usuarios).usuarios[2].senha;
+
+
+            for (i = db.data.length - 1; i >= 0; i--) {
+                let noticia = db.data[i];
+                if(noticia.nome == usuarioCorrente.nome)
+                {
+                    $("#corpo").append(`<div><h6><b>${noticia.nome}</b></h6>
+                                    <h6>${noticia.data}</h6>
+                                    <h4><b>${noticia.titulo}</b></h4>
+                                    <h5>${noticia.subTitulo}</h5>
+                                    <img width="500" src = "${noticia.imagem}">
+                                    <p class = 'postagem'>${noticia.noticia}</p></div>`);
+                }
+            }
+        }
+
+        function init()
+        {
+            exibeNoticias();
+        }
+    </script>
+</body>
+>>>>>>> 725bb6eed9511bc67987a3f0675d96cff20a1c4f
 </html>
